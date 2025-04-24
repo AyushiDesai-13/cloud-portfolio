@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cloud Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f7f8fc;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #3b82f6;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+    }
+    section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #2563eb;
+    }
+    .project {
+      margin-bottom: 20px;
+    }
+    .project h3 {
+      margin: 10px 0;
+      color: #1e40af;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    form button {
+      background: #2563eb;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Cloud Portfolio</h1>
+    <p>Built with GitHub + Vercel</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>Hello! I'm a student passionate about cloud computing and web development. This site is deployed fully on the cloud using Vercel and GitHub. It’s fast, serverless, and 100% free.</p>
+  </section>
+
+  <section>
+    <h2>My Cloud Projects</h2>
+    <div class="project">
+      <h3>Feedback App on AWS (Serverless)</h3>
+      <p>A form connected to Lambda, API Gateway, and DynamoDB. It stores user feedback without a backend server.</p>
+    </div>
+    <div class="project">
+      <h3>This Portfolio Website (Vercel)</h3>
+      <p>This very website is deployed on the Vercel cloud using GitHub for source control and CI/CD.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Cloud Portfolio. Deployed on the Cloud with
+  </footer>
+
+</body>
+</html>
