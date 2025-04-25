@@ -1,5 +1,4 @@
-<!-- Trigger Vercel Deployment -->
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,102 +6,221 @@
   <title>Cloud Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
     body {
       font-family: 'Inter', sans-serif;
-      background: #f7f8fc;
-      color: #333;
+      background: linear-gradient(135deg, #fce4ec, #fce8f1);
+      color: #2e2e2e;
       line-height: 1.6;
+      overflow-x: hidden;
     }
-    <!-- Trigger redeploy -->
-
+  
     header {
-      background: #3b82f6;
+      background: linear-gradient(to right, #ec4899, #f472b6);
       color: white;
-      padding: 40px 20px;
+      padding: 80px 20px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
+  
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
+      z-index: -1;
+    }
+  
     header h1 {
-      font-size: 3rem;
+      font-size: 4rem;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+      animation: fadeIn 1s ease-in-out;
     }
+  
+    header p {
+      font-size: 1.3rem;
+      margin-top: 12px;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+  
     section {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      max-width: 950px;
+      margin: 60px auto;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      animation: slideIn 1s ease forwards;
+      transition: transform 0.3s ease;
     }
+  
+    section:hover {
+      transform: translateY(-5px);
+    }
+  
     h2 {
-      margin-bottom: 20px;
-      color: #2563eb;
+      font-size: 2.2rem;
+      color: #ec4899;
+      border-left: 5px solid #f472b6;
+      padding-left: 12px;
+      margin-bottom: 24px;
     }
+  
     .project {
+      background: linear-gradient(120deg, #fff0f6, #ffe4ed);
+      padding: 20px 25px;
+      border-radius: 16px;
       margin-bottom: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+      border-left: 5px solid #f9a8d4;
     }
+  
+    .project:hover {
+      transform: scale(1.015);
+      background: linear-gradient(120deg, #ffe4ed, #fff0f6);
+    }
+  
     .project h3 {
-      margin: 10px 0;
-      color: #1e40af;
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      color: #be185d;
     }
+  
     form input, form textarea {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+      padding: 14px;
+      margin-bottom: 18px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: border 0.3s ease, box-shadow 0.3s ease;
     }
+  
+    form input:focus, form textarea:focus {
+      border-color: #ec4899;
+      box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.2);
+      outline: none;
+    }
+  
     form button {
-      background: #2563eb;
+      background: linear-gradient(to right, #ec4899, #f472b6);
       color: white;
-      padding: 10px 20px;
+      padding: 14px 30px;
+      font-size: 1rem;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
+  
+    form button:hover {
+      background: #be185d;
+      transform: translateY(-2px);
+    }
+  
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 30px 15px;
       font-size: 0.9rem;
+      background: #fdf2f8;
       color: #555;
+      margin-top: 60px;
+      border-top: 1px solid #fbcfe8;
+    }
+  
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
+  
+  
 </head>
 <body>
 
   <header>
     <h1>My Cloud Portfolio</h1>
-    <p>Built with GitHub + Vercel</p>
+    
   </header>
 
   <section>
-    <h2>About Me</h2>
-    <p>Hello! I'm a student passionate about cloud computing and web development. This site is deployed fully on the cloud using Vercel and GitHub. It’s fast, serverless, and 100% free.</p>
+    <h2>About Us</h2>
+    <p>We are a group of passionate students and aspiring cloud engineers who love building things on the internet. This portfolio is a collaborative project developed as part of our academic journey to explore the power of cloud technologies.</p>
+    <p>Together, we are learning and experimenting with serverless architecture, CI/CD workflows, and full-stack development using platforms like AWS, Vercel, and Firebase. Our mission is to craft fast, scalable, and cost-efficient web experiences while growing as developers and cloud professionals.</p>
+    <p><strong>Team Members:</strong> Kashvi Singh and Ayushi Desai.</p>
   </section>
-
+  
   <section>
-    <h2>My Cloud Projects</h2>
-    <div class="project">
-      <h3>Feedback App on AWS (Serverless)</h3>
-      <p>A form connected to Lambda, API Gateway, and DynamoDB. It stores user feedback without a backend server.</p>
+    <h2>Our Team</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center;">
+      <div style="text-align: center;">
+        <img src="ayushi.png" alt="Your Photo" style="width: 160px; height: 160px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+        <p style="margin-top: 10px; font-weight: bold;">Ayushi Desai</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="kashvi.png" alt="Kashvi Singh" style="width: 160px; height: 160px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+        <p style="margin-top: 10px; font-weight: bold;">Kashvi Singh</p>
+      </div>
     </div>
-    <div class="project">
-      <h3>This Portfolio Website (Vercel)</h3>
-      <p>This very website is deployed on the Vercel cloud using GitHub for source control and CI/CD.</p>
+    <p style="text-align: center; margin-top: 30px;">We’re working together on this portfolio project as part of our academic journey, combining creativity and cloud computing expertise.</p>
+  </section>
+  <section>
+    <h2>Skills</h2>
+    <p>We are continuously improving our skills and embracing new technologies to stay ahead in the cloud engineering field. Below are some of the key skills we have developed:</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+      <div style="text-align: center;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQerGEWZxlTG4jra5dMGs4mUz8DWvZmuIEkoQ&s" alt="AWS" style="width: 60px; height: 60px;" />
+        <p>AWS</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD3aFKD5l5BfkC-P38z6uN_E5eCeFdH1z1jg&s" alt="Firebase" style="width: 60px; height: 60px;" />
+        <p>Firebase</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlBPl5Yre6JWvlAcM6L3O5K2idTibw6vKteg&s" alt="Vercel" style="width: 60px; height: 60px;" />
+        <p>Vercel</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Git" style="width: 60px; height: 60px;" />
+        <p>Git & GitHub</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlGmKtrnxElpqw3AExKXPWWBulcwjlvDJa1Q&s" alt="React" style="width: 60px; height: 60px;" />
+        <p>React.js</p>
+      </div>
     </div>
   </section>
-
+  
   <section>
-    <h2>Contact Me</h2>
+    <h2>Contact Us</h2>
+    <p>Got a question, want to collaborate, or just say hi? I'm always open to connecting with fellow developers and cloud enthusiasts!</p>
     <form>
       <input type="text" placeholder="Your Name" required />
       <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message"></textarea>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
   <footer>
-    © 2025 Cloud Portfolio. Deployed on the Cloud with
+    © 2025 Cloud Portfolio. Designed & built with ☁️ and 🩷 — deployed on Vercel.
   </footer>
 
 </body>
